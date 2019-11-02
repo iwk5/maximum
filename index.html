@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Maximum | Home</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="CareMed demo project">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
+	<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+	<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+	<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
+	<link rel="stylesheet" type="text/css" href="styles/main_styles.css">
+	<link rel="stylesheet" type="text/css" href="styles/responsive.css">
+	<style>
+		.banner-head-list {
+			display: flex;
+		}
+
+		.banner-head-list i {
+			margin: 6px 10px 0px 0px;
+		}
+
+		.blue-boxes .box {
+			padding: 15px;
+		}
+
+		.why .why-img img {
+			width: 100%;
+		}
+
+		.why-content {
+			padding: 35px 80px;
+		}
+
+		.why-ok {
+			background: #6610f2;
+		}
+
+		.why-ok p {
+			color: #fff;
+		}
+
+		.why-ok:after {
+			position: absolute;
+			top: 0px;
+			right: -110px;
+			-webkit-transform: skew(-14deg);
+			-moz-transform: skew(-14deg);
+			-o-transform: skew(-14deg);
+			width: 205px;
+			height: 100%;
+			content: '';
+			z-index: 2;
+			background-color: #6610f2;
+			text-shadow: 0 0 black;
+		}
+
+		.sec-space {
+			padding: 80px 0;
+			text-align: center;
+		}
+
+		.specialities-sec .lead-wrap object {
+			width: 100px;
+			height: 100px;
+			margin: 0 0 20px 0;
+		}
+
+		.spec-col-inner {
+			display: block;
+			padding: 20px 10px;
+			text-align: center;
+			-webkit-border-radius: 8px;
+			-moz-border-radius: 8px;
+			border-radius: 8px;
+			margin-bottom: 20px;
+			background: #ffffff;
+			color: #004465 !important;
+			text-decoration: none !important;
+			-webkit-box-shadow: 1px 1px 6px 0 rgba(0, 0, 0, 0.08);
+			-moz-box-shadow: 1px 1px 6px 0 rgba(0, 0, 0, 0.08);
+			box-shadow: 1px 1px 6px 0 rgba(0, 0, 0, 0.08);
+		}
+
+		.spec-col-inner object {
+			pointer-events: none;
+			width: 48px;
+			height: 48px;
+			margin: 0;
+		}
+
+		.spec-details {
+			padding: 25px 50px;
+		}
+
+		.spec-boxes {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.spec-boxes .spec-box {
+			width: 19%;
+		}
+
+		/* right side sticky social links */
+		.right-sticky-smenu {
+			padding: 0px;
+			margin: 0px;
+			position: fixed;
+			right: -130px;
+			top: 230px;
+			width: 210px;
+			z-index: 1100;
+		}
+
+		.right-sticky-smenu {
+			left: 0;
+			position: fixed;
+			top: 30%;
+		}
+
+		.right-sticky-smenu li:first-child a {
+			border-top-right-radius: 5px;
+		}
+
+		.right-sticky-smenu li:last-child a {
+			border-bottom-right-radius: 5px;
+		}
+
+		.right-sticky-smenu a {
+			background: #283290;
+			color: #fff;
+			text-decoration: none;
+			display: block;
+			height: 50px;
+			width: 50px;
+			font-size: 24px;
+			line-height: 50px;
+			position: relative;
+			text-align: center;
+			cursor: pointer;
+		}
+
+		.right-sticky-smenu a:hover span {
+			left: 120%;
+			opacity: 1;
+			color: #fff;
+		}
+
+		.right-sticky-smenu a:hover i {
+			color: #fff;
+		}
+
+		.right-sticky-smenu a span {
+			font-size: 12px;
+			text-transform: uppercase;
+			border-radius: 3px;
+			line-height: 24px;
+			left: -100%;
+			margin-top: -16px;
+			/* opacity: 0; */
+			padding: 4px 8px;
+			position: absolute;
+			/* transition: opacity .3s, left .4s; */
+			top: 50%;
+			z-index: -1;
+		}
+
+		.right-sticky-smenu a span:before {
+			content: "";
+			display: block;
+			height: 8px;
+			width: 8px;
+			left: -4px;
+			margin-top: -4px;
+			position: absolute;
+			top: 50%;
+			transform: rotate(45deg);
+
+		}
+
+		.right-sticky-smenu a[class*="twitter"]:hover,
+		.right-sticky-smenu a[class*="twitter"] span,
+		.right-sticky-smenu a[class*="twitter"] span:before {
+			background: #00aced;
+			color: #fff;
+		}
+
+		.right-sticky-smenu a[class*="facebook"]:hover,
+		.right-sticky-smenu a[class*="facebook"] span,
+		.right-sticky-smenu a[class*="facebook"] span:before {
+			background: #3B5998;
+			color: #fff;
+		}
+
+		.right-sticky-smenu a[class*="gplus"]:hover,
+		.right-sticky-smenu a[class*="gplus"] span,
+		.right-sticky-smenu a[class*="gplus"] span:before {
+			background: #E34429;
+			color: #fff;
+		}
+
+		/* right more specialities :start */
+		.modal-dialog-slideout {
+			min-height: 100%;
+			margin: 0 0 0 auto;
+			background: #fff;
+		}
+
+		.modal.fade .modal-dialog.modal-dialog-slideout {
+			-webkit-transform: translate(100%, 0)scale(1);
+			transform: translate(100%, 0)scale(1);
+		}
+
+		.modal.fade.show .modal-dialog.modal-dialog-slideout {
+			-webkit-transform: translate(0, 0);
+			transform: translate(0, 0);
+			display: flex;
+			align-items: stretch;
+			-webkit-box-align: stretch;
+			height: 100%;
+		}
+
+		.modal.fade.show .modal-dialog.modal-dialog-slideout .modal-body {
+			overflow-y: auto;
+			overflow-x: hidden;
+		}
+
+		.modal-dialog-slideout .modal-content {
+			border: 0;
+		}
+
+		.modal-dialog-slideout .modal-header,
+		.modal-dialog-slideout .modal-footer {
+			height: 69px;
+			display: block;
+		}
+
+		.modal-dialog-slideout .modal-header h5 {
+			float: left;
+		}
+
+		.check-list li {
+			padding-bottom: 10px;
+			color: #283290;
+			font-weight: 400;
+			display: flex;
+		}
+
+		.check-list li:before {
+			content: "\f105";
+			font-family: 'FontAwesome';
+			font-style: normal;
+			font-weight: normal;
+			font-variant: normal;
+			text-transform: none;
+			line-height: 1;
+			color: #28a745;
+			margin-right: 10px;
+		}
+
+		.more-spec-right-modal .close {
+			float: left;
+			border: 1px solid gray;
+			border-radius: 38px;
+			padding: 0px 6px;
+			margin: 0px;
+			margin-right: 10px;
+		}
+
+		/* end more specialites */
+	</style>
+</head>
+
+<body>
+
+	<div class="super_container">
+
+		<!-- Header -->
+
+		<header class="header trans_200">
+
+			<!-- Top Bar -->
+			<div class="top_bar">
+				<div class="container">
+					<div class="row">
+						<div class="col">
+							<div class="top_bar_content d-flex flex-row align-items-center justify-content-start">
+								<div class="top_bar_item"><a href="#">FAQ</a></div>
+								<div class="top_bar_item"><a href="#">Request an Appointment</a></div>
+								<div
+									class="emergencies  d-flex flex-row align-items-center justify-content-start ml-auto">
+									For Emergencies: +563 47558 623</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Header Content -->
+			<div class="header_container">
+				<div class="container">
+					<div class="row">
+						<div class="col">
+							<div class="header_content d-flex flex-row align-items-center justify-content-start">
+								<nav class="main_nav ml-auto">
+									<ul>
+										<li><a href="index.html">Home</a></li>
+										<li><a href="#">Services</a></li>
+										<li><a href="#">About us</a></li>
+										<li><a href="#">Contact us</a></li>
+										<li><a href="#">Plan Pricing</a></li>
+										<li><a href="#">Referral Program</a></li>
+									</ul>
+								</nav>
+								<div class="hamburger ml-auto"><i class="fa fa-bars" aria-hidden="true"></i></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Logo -->
+			<div class="logo_container_outer">
+				<div class="container">
+					<div class="row">
+						<div class="col">
+							<div class="logo_container">
+								<a href="#">
+									<div class="d-flex flex-column align-items-start justify-content-center">
+										<img src="./images/Logo.PNG" style="width: 100%;">
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</header>
+
+		<!-- Menu -->
+
+		<div class="menu_container menu_mm">
+
+			<!-- Menu Close Button -->
+			<div class="menu_close_container">
+				<div class="menu_close"></div>
+			</div>
+
+			<!-- Menu Items -->
+			<div class="menu_inner menu_mm">
+				<div class="menu menu_mm">
+					<ul class="menu_list menu_mm">
+						<li class="menu_item menu_mm"><a href="index.html">Home</a></li>
+						<li class="menu_item menu_mm"><a href="#">Services</a></li>
+						<li class="menu_item menu_mm"><a href="#">About us</a></li>
+						<li class="menu_item menu_mm"><a href="#">Plan Pricing</a></li>
+						<li class="menu_item menu_mm"><a href="#">Referral Program</a></li>
+					</ul>
+				</div>
+				<div class="menu_extra">
+					<div class="menu_appointment"><a href="#">Request an Appointment</a></div>
+					<div class="menu_emergencies">For Emergencies: +563 47558 623</div>
+				</div>
+
+			</div>
+
+		</div>
+
+		<!-- Home -->
+
+		<div class="home">
+			<div class="home_slider_container">
+				<!-- Home Slider -->
+				<div class="owl-carousel owl-theme home_slider">
+
+					<!-- Slider Item 1 -->
+					<div class="owl-item">
+						<div class="home_slider_background" style="background-image:url(images/home_background_1.jpg)">
+						</div>
+						<div class="home_content">
+							<div class="container">
+								<div class="row">
+									<div class="col">
+										<div class="home_content_inner">
+											<div class="home_title">
+												<h1>Let Grow together</h1>
+												<h3>Through Maximus, Managed billing</h3>
+											</div>
+											<div class="home_text">
+												<div class="banner-head-list">
+													<i class="fa fa-angle-right" aria-hidden="true"></i>
+													<p>You care for your patients</p>
+												</div>
+												<div class="banner-head-list">
+													<i class="fa fa-angle-right" aria-hidden="true"></i>
+													<p>We care for your practice</p>
+												</div>
+												<div class="banner-head-list">
+													<i class="fa fa-angle-right" aria-hidden="true"></i>
+													<p>Investing in your future starts with a bold first step ...</p>
+												</div>
+
+
+
+											</div>
+											<div class="button home_button">
+												<a href="#">read more</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Slider Item 2-->
+					<div class="owl-item">
+						<div class="home_slider_background" style="background-image:url(images/home_background_2.jpg)">
+						</div>
+						<div class="home_content">
+							<div class="container">
+								<div class="row">
+									<div class="col">
+										<div class="home_content_inner">
+											<div class="home_title">
+
+											</div>
+											<div class="home_text">
+												<div class="banner-head-list">
+													<i class="fa fa-angle-right" aria-hidden="true"></i>
+													<p>Best practices training and Electronic Remittance Advice (ERA)
+														enrollment review.</p>
+												</div>
+												<div class="banner-head-list">
+													<i class="fa fa-angle-right" aria-hidden="true"></i>
+													<p>Streamline office workflows</p>
+												</div>
+											</div>
+											<div class="button home_button">
+												<a href="#">read more</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Slider Item 3-->
+					<div class="owl-item">
+						<div class="home_slider_background" style="background-image:url(images/home_background_1.jpg)">
+						</div>
+						<div class="home_content">
+							<div class="container">
+								<div class="row">
+									<div class="col">
+										<div class="home_content_inner">
+											<div class="home_title">
+												<h1></h1>
+											</div>
+											<div class="home_text">
+												<div class="banner-head-list">
+													<i class="fa fa-angle-right" aria-hidden="true"></i>
+													<p> Practice management and services to complement your billing
+														team.
+													</p>
+												</div>
+												<div class="banner-head-list">
+													<i class="fa fa-angle-right" aria-hidden="true"></i>
+													<p>Streamline billing and identify new revenue opportunities.</p>
+												</div>
+											</div>
+											<div class="button home_button">
+												<a href="#">read more</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<!-- Slider Progress -->
+				<div class="home_slider_progress"></div>
+			</div>
+		</div>
+
+		<!-- 3 Boxes -->
+
+		<div class="boxes">
+			<div class="container-fluid" style="width: 90%;">
+				<div class="row blue-boxes">
+
+					<!-- Box 1-->
+					<div class="col-lg-3 box_col">
+						<div class="box">
+							<div class="box_title text-center">Medical Billing</div>
+							<div class="box_text">Medical Billing is very important and crucial billing which have to be
+								handled with perfect care and intense
+								documentation. Our specialty-focused billing experts are always there to help you to
+								avoid billing errors. We are expert
+								in Professional Institutional Nursing Home Emergency Room Out-of-Network DME and
+								Laboratory and telemedicine Billing</div>
+						</div>
+					</div>
+
+					<!-- Box 2-->
+					<div class="col-lg-3 box_col">
+						<div class="box">
+							<div class="box_title text-center">Credentialing and Enrollment</div>
+							<div class="box_text">We provide all types of enrollments and credentialing services with
+								all type of payers including Medicare and Medicaid.
+								Utilize Maximus’s expertise in provider credentialing and enrollment to keep physician
+								credentials updated with payers
+								and reduce denials.</div>
+						</div>
+					</div>
+
+					<!-- Box 3-->
+					<div class="col-lg-3 box_col">
+						<div class="box">
+							<div class="box_title text-center">Medical Coding</div>
+							<div class="box_text">Medical codding has high value to successful revenue generation.
+								Coding accuracy will effect medical billing returns,
+								rejections and claims denials. Don’t let code compliance get in the way of providing
+								excellent patient care. With our
+								coding services enhance your coding quality, accuracy revenue, and reduce claim denials.
+							</div>
+						</div>
+					</div>
+
+					<!-- Box 4-->
+					<div class="col-lg-3 box_col">
+						<div class="box">
+							<div class="box_title text-center">Practice Management</div>
+							<div class="box_text">Medical practices need a reliable and efficient way to increase
+								revenues and efficient practice management solutions. A
+								sophisticated Suite of Services. Find Out How You Can Immediately Lower Overhead &
+								Increase Revenue, staff productivity
+								and Streamline office workflows</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- About -->
+
+		<div class="about">
+			<div class="container">
+				<div class="row row-lg-eq-height">
+
+					<!-- About Content -->
+					<div class="col-lg-7">
+						<div class="about_content">
+							<div class="section_title">
+								<h2>Welcome to Maximus Medical Billing Company</h2>
+								<h2>START SMART</h2>
+							</div>
+							<div class="about_text">
+								<p>Welcome to Maximus Medical Billing. We are a Physician Billing, Practice Management,
+									Credentialing and Consulting
+									company. Our typical physician clients range from hospital based specialties to
+									private office specialties.</p>
+								<p>
+									To set you up for long-term success, your dedicated Success Coach will walk you
+									through the data gathering process.
+									You’ll understand what you need on the front-end so your medical billing can be
+									streamlined on the back-end.
+								</p>
+							</div>
+							<div class="button about_button">
+								<a href="#">read more</a>
+							</div>
+						</div>
+					</div>
+
+					<!-- About Image -->
+					<div class="col-lg-5">
+						<div class="about_image"><img src="images/about.png" alt=""></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="why">
+			<div class="row row-lg-eq-height">
+
+				<!-- why Content -->
+				<div class="col-lg-5 why-ok">
+					<div class="why-content">
+						<div class="section_title">
+							<h2>Why Maximus</h2>
+						</div>
+						<div class="about_text">
+							<p>Welcome to Maximus Medical Billing. We are a Physician Billing, Practice Management,
+								Credentialing and Consulting
+								company. Our typical physician clients range from hospital based specialties to
+								private office specialties.</p>
+							<p>
+								To set you up for long-term success, your dedicated Success Coach will walk you
+								through the data gathering process.
+								You’ll understand what you need on the front-end so your medical billing can be
+								streamlined on the back-end.
+							</p>
+						</div>
+						<div class="button about_button">
+							<a href="#">read more</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- why Image -->
+				<div class="col-lg-7">
+					<div class="why-img"><img src="images/ok.png" alt=""></div>
+				</div>
+			</div>
+		</div>
+		<!-- Services -->
+
+		<div class="specialities-sec sec-space">
+			<div class="container">
+
+				<div class="lead-wrap">
+					<object data="./images/icons/ico-star-fill.svg" type="image/svg+xml"></object>
+					<h3 class="h2">Specialties</h3>
+					<p class="spec-details">For over 15 years, we’ve been helping physicians, clinics, group practices,
+						and
+						hospital owned physician groups with
+						their medical billing.
+						Our average medical billing collection rate is 98%, which is one of the best in the
+						industry.
+
+						Our physician billing services and medical billing can be used for all types of medical
+						practices, including.
+					</p>
+				</div>
+				<!--/.lead-wrap-->
+
+				<div class="specs-cols-outer specialities">
+
+					<div class="row spec-boxes">
+
+						<div class="spec-box">
+							<a class="spec-col-inner">
+								<object data="./images/icons/podiatry.svg" type="image/svg+xml"></object>
+								<p>Podiatry</p>
+							</a>
+							<!--/.spec-col-inner-->
+						</div>
+						<!--/.col-md-2-->
+
+						<div class="spec-box">
+							<a class="spec-col-inner">
+								<object data="./images/icons/pediatrics.svg" type="image/svg+xml"></object>
+								<p>Pediatrics</p>
+							</a>
+							<!--/.spec-col-inner-->
+						</div>
+						<!--/.col-md-2-->
+
+						<div class="spec-box">
+							<a class="spec-col-inner">
+								<object data="./images/icons/ob-gyn.svg" type="image/svg+xml"></object>
+								<p>OB-GYN</p>
+							</a>
+							<!--/.spec-col-inner-->
+						</div>
+						<!--/.col-md-2-->
+
+						<div class="spec-box">
+							<a class="spec-col-inner">
+								<object data="./images/icons/psychiatry.svg" type="image/svg+xml"></object>
+								<p>Psychiatry</p>
+							</a>
+							<!--/.spec-col-inner-->
+						</div>
+						<!--/.col-md-2-->
+
+						<div class="spec-box">
+							<a href="#" class="spec-col-inner" data-toggle="modal" data-target="#exampleModal4">
+								<object data="./images/icons/more.svg" type="image/svg+xml"></object>
+								<p>More Specialties</p>
+							</a>
+							<!--/.spec-col-inner-->
+						</div>
+						<!--/.col-md-2-->
+
+					</div>
+					<!--/.row-->
+				</div>
+				<!--/.specs-cols-outer-->
+
+			</div>
+			<!--/.container-->
+		</div>
+
+		<!-- Call to action -->
+
+		<div class="cta">
+			<div class="cta_background parallax-window" data-parallax="scroll" data-image-src="images/cta.jpg"
+				data-speed="0.8"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="cta_content text-center">
+							<h2>Need a personal health plan?</h2>
+							<p>Duis massa massa, mollis vel ullamcorper quis, finibus et urna. Aliquam ac eleifend
+								metus. Ut sollicitudin risus ex</p>
+							<div class="button cta_button"><a href="#">request a plan</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<ul class="right-sticky-smenu">
+			<li>
+				<a class="entypo-twitter"><i class="fa fa-twitter" aria-hidden="true"></i>
+					<span>Tweeter</span></a>
+			</li>
+			<li>
+				<a class="entypo-facebook"><i class="fa fa-facebook" aria-hidden="true"></i><span>Facebook</span></a>
+			</li>
+			<li>
+				<a class="entypo-gplus"><i class="fa fa-google-plus" aria-hidden="true"></i><span>Google+</span></a>
+			</li>
+		</ul>
+		<div class="modal fade more-spec-right-modal" id="exampleModal4" tabindex="-1" role="dialog"
+			aria-labelledby="exampleModalLabel4" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-slideout modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">×</span>
+						</button>
+						<h4 class="modal-title" id="exampleModalLabel" style="color: #283290;">Specialties</h4>
+
+					</div>
+					<div class="modal-body">
+						<div class="row">
+							<div class="col-md-4">
+								<ul class="check-list">
+									<li>Acupuncture</li>
+									<li>Allergy/Immunology</li>
+									<li>Anesthesiology</li>
+									<li>Audiologist</li>
+									<li>Cardiology</li>
+									<li>Certified Clinical Nurse Specialist</li>
+									<li>Chiropractor</li>
+									<li>Clinical Neuropsychologist</li>
+									<li>Clinical Psychologist</li>
+									<li>Colon Rectal Surgery</li>
+									<li>Counseling</li>
+									<li>CRNA</li>
+									<li>Dermatology</li>
+									<li>Diagnostic Radiology</li>
+									<li>Dietitian</li>
+									<li>Electrophysiology</li>
+									<li>Emergency Medicine</li>
+									<li>Endocrinology</li>
+									<li>Family Practice</li>
+									<li>Gastroenterology</li>
+									<li>General Practice</li>
+									<li>General Surgery</li>
+									<li>Geriatric Medicine</li>
+									<li>Hand Surgery</li>
+
+								</ul>
+							</div>
+							<div class="col-md-4">
+								<ul class="check-list">
+
+
+									<li>Hospitals General Acute</li>
+									<li>Infectious Disease</li>
+									<li>Internal Medicine</li>
+									<li>Interventional Pain</li>
+									<li>Medical Genetics</li>
+									<li>Multiple Specialty</li>
+									<li>Naturopath</li>
+									<li>Nephrology</li>
+									<li>Neurology</li>
+									<li>Neuropsychiatry</li>
+									<li>Neurosurgery</li>
+									<li>Nuclear Medicine</li>
+									<li>Nurse Practitioner</li>
+									<li>OB-GYN</li>
+									<li>Occupational Therapy</li>
+									<li>Oncology</li>
+									<li>Ophthalmology</li>
+									<li>Optometrist</li>
+									<li>Orthopedic Surgery</li>
+									<li>Other Medical Supply Company</li>
+									<li>Otolaryngology</li>
+									<li>Pain Management</li>
+									<li>Pathology</li>
+									<li>Pediatric Medicine</li>
+								</ul>
+							</div>
+							<div class="col-md-4">
+								<ul class="check-list">
+
+
+
+									<li>Physical Medicine &amp; Rehab</li>
+									<li>Physical Therapist</li>
+									<li>Physician Assistant</li>
+									<li>Plastic Surgery</li>
+									<li>Podiatry</li>
+									<li>Preventive Medicine</li>
+									<li>Prosthetic Orthotic</li>
+									<li>Psychiatry</li>
+									<li>Pulmonary Diseases</li>
+									<li>Radiation Oncology</li>
+									<li>Radiology</li>
+									<li>Rheumatology</li>
+									<li>Service Providers</li>
+									<li>Sleep Diagnostics</li>
+									<li>Social Worker</li>
+									<li>Surgical Oncology</li>
+									<li>Sports Medicine</li>
+									<li>Sleep Medicine</li>
+									<li>Surgery-General</li>
+									<li>Thoracic Surgery</li>
+									<li>Urology</li>
+									<li>Vascular Surgery</li>
+
+								</ul>
+							</div>
+
+
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- Footer -->
+
+		<footer class="footer">
+			<div class="footer_container">
+				<div class="container">
+					<div class="row">
+
+						<!-- Footer - About -->
+						<div class="col-lg-4 footer_col">
+							<div class="footer_about">
+								<div class="footer_logo_container">
+									<a href="#" class="d-flex flex-column align-items-center justify-content-center">
+										<div class="logo_content">
+											<img src="./images/Logo.PNG">
+										</div>
+									</a>
+								</div>
+								<div class="footer_about_text">
+									<p>Lorem ipsum dolor sit amet, conse ctetur adipiscing elit. Curabitur ante leo,
+										finibus quis est ut, tempor tincidunt ipsum.</p>
+								</div>
+								<ul class="footer_about_list">
+									<li>
+										<div class="footer_about_icon"><img src="images/phone-call.svg" alt=""></div>
+										<span>+45 677 8993000 223</span>
+									</li>
+									<li>
+										<div class="footer_about_icon"><img src="images/envelope.svg" alt=""></div>
+										<span>office@template.com</span>
+									</li>
+									<li>
+										<div class="footer_about_icon"><img src="images/placeholder.svg" alt=""></div>
+										<span>Main Str. no 45-46, b3, 56832, Los Angeles, CA</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<!-- Footer - Links -->
+						<div class="col-lg-4 footer_col">
+							<div class="footer_links footer_column">
+								<div class="footer_title">Useful Links</div>
+								<ul>
+									<li><a href="#">Testimonials</a></li>
+									<li><a href="#">FAQ</a></li>
+									<li><a href="#">Apply for a Job</a></li>
+									<li><a href="#">Terms & Conditions</a></li>
+									<li><a href="#">Our Partners</a></li>
+									<li><a href="#">Services</a></li>
+									<li><a href="#">Free services</a></li>
+									<li><a href="#">About us</a></li>
+									<li><a href="#">News</a></li>
+									<li><a href="#">Contact</a></li>
+									<li><a href="#">Our Screening Program</a></li>
+									<li><a href="#">FAQ</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<!-- Footer - News -->
+						<div class="col-lg-4 footer_col">
+							<div class="footer_news footer_column">
+								<div class="footer_title">Useful Links</div>
+								<ul>
+									<li>
+										<div class="footer_news_title"><a href="news.html">Aliquam ac eleifend metus</a>
+										</div>
+										<div class="footer_news_date">March 10, 2018</div>
+									</li>
+									<li>
+										<div class="footer_news_title"><a href="news.html">Donec in libero sit amet mi
+												vulputate</a></div>
+										<div class="footer_news_date">March 10, 2018</div>
+									</li>
+									<li>
+										<div class="footer_news_title"><a href="news.html">Aliquam ac eleifend metus</a>
+										</div>
+										<div class="footer_news_date">March 10, 2018</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="copyright">
+				<div class="container">
+					<div class="row">
+						<div class="col">
+							<div
+								class="copyright_content d-flex flex-lg-row flex-column align-items-lg-center justify-content-start">
+								<div class="cr">
+									<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+									Copyright &copy;
+									<script>document.write(new Date().getFullYear());</script> All rights reserved |
+									<a href="" target="_blank">wk</a>
+									<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+								</div>
+								<div class="footer_social ml-lg-auto">
+									<ul class="foot-inl-list">
+										<li><a href="#">Legal Information</a>
+										</li>
+										<li>
+											|
+										</li>
+										<li><a href="#">Privacy Policy</a>
+										</li>
+										<li>
+											|
+										</li>
+										<li><a href="#">Site Map</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="styles/bootstrap4/popper.js"></script>
+	<script src="styles/bootstrap4/bootstrap.min.js"></script>
+	<script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+	<script src="plugins/easing/easing.js"></script>
+	<script src="plugins/parallax-js-master/parallax.min.js"></script>
+	<script src="js/custom.js"></script>
+</body>
+
+</html>
